@@ -1,3 +1,11 @@
+pipelineJob('pipelineJob') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('pipelineJob.groovy'))
+            sandbox()
+        }
+    }
+}
 pipelineJob('theme-park-job') {
     definition {
         cpsScm {
@@ -11,3 +19,4 @@ pipelineJob('theme-park-job') {
             }
         }
     }
+}
